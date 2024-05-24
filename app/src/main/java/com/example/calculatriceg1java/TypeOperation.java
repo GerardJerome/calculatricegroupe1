@@ -11,4 +11,8 @@ public enum TypeOperation {
     TypeOperation(String s) {
         this.symbole = s;
     }
+
+    public String getSymbole() {
+        return symbole;
+    }
 }

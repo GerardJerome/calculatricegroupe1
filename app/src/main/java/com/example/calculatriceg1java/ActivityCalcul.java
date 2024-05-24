@@ -15,6 +15,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.calculatriceg1java.database.CalculBaseHelper;
+import com.example.calculatriceg1java.database.CalculDao;
+import com.example.calculatriceg1java.entities.Calcul;
+
 public class ActivityCalcul extends AppCompatActivity {
     private Button bouton0;
     private Button bouton1;
@@ -36,6 +40,8 @@ public class ActivityCalcul extends AppCompatActivity {
     private Integer deuxiemeTerme = 0;
     private Integer resultat;
 
+    private CalculDao calculDao;
+
 
 
     @Override
@@ -48,7 +54,7 @@ public class ActivityCalcul extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        calculDao = new CalculDao(new CalculBaseHelper(this,"dbg1",1));
         bouton0 = findViewById(R.id.button0);
         bouton1 = findViewById(R.id.button1);
         bouton2 = findViewById(R.id.button2);
@@ -136,20 +142,29 @@ public class ActivityCalcul extends AppCompatActivity {
     // TEXTVIEWRESULTAT
     // AVEC LE RESULAT DE L'OPERATION
     private void faisLeCalcul(int a, int b){
+        Calcul calcul = new Calcul();
+        calcul.setPremierElement(a);
+        calcul.setDeuxiemeELement(b);
+        calcul.setSymbole(typeOperation.getSymbole());
         switch (typeOperation){
             case ADD:
+                calcul.setResultat(premierTerme + deuxiemeTerme);
                 textViewResultat.setText(String.valueOf(premierTerme + deuxiemeTerme));
                 break;
             case SUBSTRACT:
+                calcul.setResultat(premierTerme - deuxiemeTerme);
                 textViewResultat.setText(String.valueOf(premierTerme - deuxiemeTerme));
                 break;
             case MULTIPLY:
+                calcul.setResultat(premierTerme * deuxiemeTerme);
                 textViewResultat.setText(String.valueOf(premierTerme * deuxiemeTerme));
                 break;
             case DIVIDE:
+                calcul.setResultat(premierTerme / deuxiemeTerme);
                 textViewResultat.setText(String.valueOf(premierTerme / deuxiemeTerme));
                 break;
         }
+        calculDao.create(calcul);
     }
 
     @Override
