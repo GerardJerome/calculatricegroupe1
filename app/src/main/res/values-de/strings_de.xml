@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="TEXT_HELLO_WORLD">Hello World en allemand</string>
+    <string name="TEXT_BOUTON_RESET">Reset en allemand</string>
+    <string name="TEXT_BOUTON_CALCULER">Calculer en allemand</string>
+    <string name="ERROR_TYPE_OPERATION">deja saisi en allemand</string>
+</resources>
