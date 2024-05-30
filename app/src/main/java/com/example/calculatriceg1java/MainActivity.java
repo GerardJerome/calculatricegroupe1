@@ -27,12 +27,15 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonCalcul;
     private TextView monTextView;
 
+    private Button boutonHistorique;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         buttonCalcul = findViewById(R.id.button_calcul);
         monTextView = findViewById(R.id.textView);
+        boutonHistorique = findViewById(R.id.bouton_historique);
         /*buttonCalcul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
+        boutonHistorique.setOnClickListener(view -> {
+            Intent intent = new Intent(this, HistoriqueActivity.class);
+            startActivity(intent);
+        });
         buttonCalcul.setOnClickListener(view -> {
             Toast.makeText(this, "j'affiche un toast", Toast.LENGTH_SHORT).show();
             monTextView.setText(getString(R.string.text_mon_textview));

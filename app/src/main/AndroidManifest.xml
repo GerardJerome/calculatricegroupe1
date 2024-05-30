@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Calculatriceg1java"
         tools:targetApi="31">
         <activity
+            android:name=".HistoriqueActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActivityCalcul"
             android:exported="false" />
         <activity

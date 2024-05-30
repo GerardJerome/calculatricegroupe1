@@ -23,6 +23,8 @@
     <string name="TEXT_BOUTON_RESET">Reset</string>
     <string name="TEXT_BOUTON_CALCULER">Calculer</string>
     <string name="ERROR_TYPE_OPERATION">deja saisi</string>
+    <string name="TEXT_NOMBRE_CALCUL">Il y a %1$d calculs dans la base</string>
+    <string name="TEXT_DERNIER_CALCUL"> Le dernier calcul est  %1$s </string>
 
     <string name="text_mon_textview">Je clique sur mon bouton</string>
 

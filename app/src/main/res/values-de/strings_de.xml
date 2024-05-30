@@ -4,4 +4,6 @@
     <string name="TEXT_BOUTON_RESET">Reset en allemand</string>
     <string name="TEXT_BOUTON_CALCULER">Calculer en allemand</string>
     <string name="ERROR_TYPE_OPERATION">deja saisi en allemand</string>
+    <string name="TEXT_NOMBRE_CALCUL">Il y a %1$d calculs dans la base en allemand</string>
+    <string name="TEXT_DERNIER_CALCUL"> Le dernier calcul est  %1$s en allemand</string>
 </resources>
