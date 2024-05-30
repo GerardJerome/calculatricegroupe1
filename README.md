@@ -32,7 +32,7 @@ Un champs de saisie de texte , et un bouton enregistrer (lors d'un appui sur enr
 
 Activité high score:
 
-AU chargement on affiche les infos du meilleur ( on vinet afficher tout les scores)
+AU chargement on affiche les infos du meilleur ( on vinet afficher tout les scores). : https://developer.android.com/codelabs/basic-android-kotlin-training-recyclerview-scrollable-list?hl=fr#4
 
 Activité a propos :
 
